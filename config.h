@@ -32,6 +32,8 @@ static const char *const autostart[] = {
   "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
   "flameshot", NULL,
   "copyq", NULL,
+  "xrandr", "--output", "HDMI-A-0", "--auto", "--pos", "0x0", "--output", "DisplayPort-2", "--auto", "--pos", "0x1080", NULL,
+  "xrandr", "--output", "HDMI-A-0", "--mode", "1920x1080", "--pos", "0x0", "--output", "DisplayPort-2", "--mode", "1920x1080", "--pos", "0x1080", NULL,
   "dunst", NULL,
   "picom", NULL,
   "sh", "-c", "feh --randomize --bg-max /home/titus/Pictures/backgrounds/*", NULL,
@@ -152,4 +154,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
