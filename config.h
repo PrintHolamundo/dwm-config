@@ -31,6 +31,7 @@ static const char *const autostart[] = {
   "dbus-update-activation-environment", "--systemd", "--all", NULL,
   "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
   "flameshot", NULL,
+  "copyq", NULL,
   "dunst", NULL,
   "picom", NULL,
   "sh", "-c", "feh --randomize --bg-max /home/titus/Pictures/backgrounds/*", NULL,
