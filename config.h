@@ -34,8 +34,9 @@ static const char *const autostart[] = {
   "copyq", NULL,
   "dunst", NULL,
   "picom", NULL,
-  "sh", "-c", "feh --randomize --bg-max /home/titus/Pictures/backgrounds/*", NULL,
+  "sh", "-c", "feh --randomize --bg-max /home/ginger/Pictures/backgrounds/*", NULL,
   "sh", "-c", "xrandr --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --output DisplayPort-2 --mode 1920x1080 --pos 0x1080", NULL,
+  "lxpolkit", NULL,
   "synergy", NULL,
   NULL /* terminate */
 };
@@ -96,6 +97,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD ("flameshot gui -p /media/drive/Screenshots/")},
 	{ MODKEY|ControlMask,           XK_p,      spawn,          SHCMD ("flameshot gui --clipboard")},
 	{ MODKEY,                       XK_e,      spawn,          SHCMD ("thunar")},
+	{ MODKEY,                       XK_9,      spawn,          SHCMD ("remmina .local/share/remmina/group_rdp_quick-connect_192-168-0-194.remmina")},
+	{ MODKEY,                       XK_s,      spawn,          SHCMD ("flatpak run com.spotify.Client")},
 	{ 0,                            0x1008ff02, spawn,         SHCMD ("xbacklight -inc 10")},
 	{ 0,                            0x1008ff03, spawn,         SHCMD ("xbacklight -dec 10")},
 	{ 0,                            0x1008ff11, spawn,         SHCMD ("amixer sset Master 5%- unmute")},
