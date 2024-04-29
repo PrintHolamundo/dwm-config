@@ -35,7 +35,7 @@ static const char *const autostart[] = {
   "dunst", NULL,
   "picom", NULL,
   "sh", "-c", "feh --randomize --bg-max /home/ginger/Pictures/backgrounds/*", NULL,
-  "sh", "-c", "xrandr --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --output DisplayPort-2 --mode 1920x1080 --pos 0x1080", NULL,
+//   "sh", "-c", "xrandr --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --output DisplayPort-2 --mode 1920x1080 --pos 0x1080", NULL, Double monitor option
   "sh", "-c", "/home/ginger/Developer/dwm-config/scripts/status", NULL,
   "lxpolkit", NULL,
   "nm-applet", NULL,
