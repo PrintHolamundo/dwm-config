@@ -12,7 +12,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "MesloLGS Nerd Font Mono:size=14" };
+static const char *fonts[]          = { "MesloLGS Nerd Font Mono:size=20" };
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#12525B";
 static const char col_gray3[]       = "#00FF00";
@@ -34,8 +34,10 @@ static const char *const autostart[] = {
   "copyq", NULL,
   "dunst", NULL,
   "picom", NULL,
-  "sh", "-c", "feh --randomize --bg-max /home/ginger/Pictures/backgrounds/*", NULL,
-//   "sh", "-c", "xrandr --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --output DisplayPort-2 --mode 1920x1080 --pos 0x1080", NULL, Double monitor option
+  "sh", "-c", "feh --randomize --bg-fill /home/ginger/Pictures/backgrounds/", NULL,
+  "sh", "-c", "w",NULL,
+  //   "sh", "-c", "xrandr --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --output DisplayPort-2 --mode 1920x1080 --pos 0x1080", NULL, Double monitor option
+  "sh", "-c", "xrandr --output DisplayPort-0 --mode 3440x1440 --rate 120", NULL,
   "sh", "-c", "/home/ginger/Developer/dwm-config/scripts/status", NULL,
   "lxpolkit", NULL,
   "nm-applet", NULL,
@@ -62,7 +64,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.75; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
