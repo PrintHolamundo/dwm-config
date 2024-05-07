@@ -4,6 +4,8 @@
 printf "$$" > ~/.cache/pidofbar
 sec=0
 
+xset s off
+
 # Update functions
 update_cpu() {
   cpu=$(awk '{print $1}' /proc/loadavg)
@@ -45,6 +47,13 @@ update_ip
 while true; do
   sleep 1
   sec=$((sec + 1))
+  case $((sec % 300)) in
+    0)
+      echo "Cambiando fondo de pantalla..."
+      feh --randomize --bg-fill /home/ginger/Pictures/backgrounds/
+      ;;
+  esac
+
   case $((sec % 60)) in
     *)
       update_time
